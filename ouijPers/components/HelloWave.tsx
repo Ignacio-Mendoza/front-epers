@@ -23,7 +23,7 @@ export function HelloWave() {
 
   return (
     <Animated.View style={animatedStyle}> 
-      <ThemedText style={styles.text}> flor olor a ojete :p </ThemedText>
+      <ThemedText style={styles.text}> manitas</ThemedText>
     </Animated.View>
   );
 }

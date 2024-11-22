@@ -6,7 +6,11 @@
       "@/*": [
         "./*"
       ]
-    }
+    },
+    "jsx": "react-jsx",
+    "moduleResolution": "node",
+    "target": "es5",
+    "lib": ["dom", "esnext"]
   },
   "include": [
     "**/*.ts",
