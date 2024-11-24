@@ -2,6 +2,10 @@ import { Image, StyleSheet, Platform } from 'react-native';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedView } from '@/components/ThemedView';
 import { Text, View} from 'react-native';
+import RankingScreen from '@/screens/RankingScreen';
+import { NavigationContainer } from '@react-navigation/native';
+
+
 
 export default function OtraCosa() {
   return (
@@ -32,6 +36,13 @@ export default function OtraCosa() {
         <Text style={styles.bold}>2. El Rol del Médium</Text>{'\n'}
         El médium debe ser astuto y audaz, eligiendo letras en la OuijPers para desvelar la palabra oculta. Cada letra acertada abre una ventana al misterio, mientras que cada fallo da más poder al espíritu. Si adivina correctamente la palabra antes de completar la figura del espíritu, el conocimiento arcano pasa al médium y la entidad regresa al plano astral. Sin embargo, si la figura se completa, el espíritu podría liberarse, tomando parte de la esencia del médium antes de romper el vínculo.
       </Text>
+      <ThemedView>
+          <Text style={styles.subTitle}>Ranking de Médiums</Text>
+          <View style={styles.rankingContainer}>
+            {/* Aquí se muestra el componente RankingScreen */}
+            <RankingScreen />
+          </View>
+        </ThemedView>
     </ThemedView>
     </ParallaxScrollView>
   );
@@ -99,6 +110,13 @@ const styles = StyleSheet.create({
     color: 'white',
     textAlign: 'center',
     marginBottom: 20,
+  },
+  rankingContainer: {
+    marginTop: 20,
+    width: '100%',
+    backgroundColor: '#222',
+    borderRadius: 8,
+    padding: 16,
   },
 }
 );

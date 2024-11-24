@@ -2,9 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, FlatList, ActivityIndicator } from 'react-native';
 
 type Player = {
-  id: number;
-  name: string;
-  score: number;
+  nombre: string;
+  puntuacion: number;
 };
 
 const RankingScreen = () => {
@@ -41,11 +40,11 @@ const RankingScreen = () => {
       <Text style={styles.title}>Ranking en Tiempo Real</Text>
       <FlatList
         data={ranking}
-        keyExtractor={(item) => item.id.toString()}
+        keyExtractor={(item) => item.nombre.toString()}
         renderItem={({ item }) => (
           <View style={styles.item}>
-            <Text style={styles.name}>{item.name}</Text>
-            <Text style={styles.score}>{item.score} puntos</Text>
+            <Text style={styles.name}>{item.nombre}</Text>
+            <Text style={styles.score}>{item.puntuacion} puntos</Text>
           </View>
         )}
       />
