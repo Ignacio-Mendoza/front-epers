@@ -1,20 +1,21 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import HomeScreen from './screens/HomeScreen'; // Importamos la pantalla de inicio
+import RankingScreen  from './screens/RankingScreen'; // Importamos la pantalla de ranking
+
+const Stack = createStackNavigator();
 
 const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>¡Bienvenido a mi aplicación React Native con TypeScript!</Text>
-    </View>
+    <NavigationContainer>
+        <Stack.Screen
+          name="Ranking"
+          component={RankingScreen}
+          options={{ title: 'Ranking en Tiempo Real' }}
+        />
+    </NavigationContainer>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});
 
 export default App;
